@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1" author="prd">
+        <createTable tableName="PRD_PRODUCT">
+            <column name="ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_PRD_PRODUCT"/>
+            </column>
+            <column name="VERSION" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_BY" type="VARCHAR(255)"/>
+            <column name="CREATED_DATE" type="DATETIME"/>
+            <column name="LAST_MODIFIED_BY" type="VARCHAR(255)"/>
+            <column name="LAST_MODIFIED_DATE" type="DATETIME"/>
+            <column name="NAME" type="VARCHAR(255)"/>
+            <column name="PRICE" type="DECIMAL(19, 2)"/>
+            <column name="MAINTAINER_ID" type="UUID"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="2" author="prd">
+        <createIndex indexName="IDX_PRODUCT_MAINTAINER_ID" tableName="PRD_PRODUCT">
+            <column name="MAINTAINER_ID"/>
+        </createIndex>
+
+        <addForeignKeyConstraint baseColumnNames="MAINTAINER_ID" baseTableName="PRD_PRODUCT"
+                                 constraintName="FK_PRD_PRODUCT_ON_MAINTAINER" referencedColumnNames="ID"
+                                 referencedTableName="USR_USER"/>
+    </changeSet>
+</databaseChangeLog>
