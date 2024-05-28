@@ -11,6 +11,7 @@
     <include file="/io/jmix/flowuidata/liquibase/changelog.xml"/>
     <include file="/io/jmix/securitydata/liquibase/changelog.xml"/>
     <include file="/com/company/users/liquibase/changelog.xml"/>
+    <include file="/com/company/customers/liquibase/changelog.xml"/>
 
     <includeAll path="/com/company/sales/liquibase/changelog" errorIfMissingOrEmpty="false"/>
 

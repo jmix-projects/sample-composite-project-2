@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <menu-config xmlns="http://jmix.io/schema/flowui/menu">
 
-    <menu id="cust" title="msg://com.company.customers/menu.addon"/>
+    <menu id="cust" title="msg://com.company.customers/menu.addon">
+        <item view="cst_Customer.list" title="msg://com.company.customers.view.customer/customerListView.title"/>
+    </menu>
 
 </menu-config>
