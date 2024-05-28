@@ -1,4 +1,4 @@
-package com.company.sales.security;
+package com.company.users.security;
 
 import io.jmix.core.entity.KeyValueEntity;
 import io.jmix.security.model.EntityAttributePolicyAction;

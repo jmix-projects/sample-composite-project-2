@@ -1,7 +1,6 @@
-package com.company.sales.view.user;
+package com.company.users.view.user;
 
-import com.company.sales.entity.User;
-import com.company.sales.view.main.MainView;
+import com.company.users.entity.User;
 import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.textfield.PasswordField;
 import com.vaadin.flow.router.Route;
@@ -15,8 +14,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.TimeZone;
 
-@Route(value = "users/:id", layout = MainView.class)
-@ViewController("User.detail")
+@Route(value = "users/:id", layout = DefaultMainViewParent.class)
+@ViewController("usr_User.detail")
 @ViewDescriptor("user-detail-view.xml")
 @EditedEntityContainer("userDc")
 public class UserDetailView extends StandardDetailView<User> {

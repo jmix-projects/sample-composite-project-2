@@ -7,11 +7,9 @@
 
     <!-- DO NOT REMOVE. This is a master changelog that runs all other changelogs. -->
 
-    <include file="/io/jmix/data/liquibase/changelog.xml"/>
-    <include file="/io/jmix/flowuidata/liquibase/changelog.xml"/>
-    <include file="/io/jmix/securitydata/liquibase/changelog.xml"/>
-    <include file="/com/company/users/liquibase/changelog.xml"/>
+    <property name="uuid.type" dbms="oracle" value="varchar2(32)"/>
+    <property name="uuid.type" dbms="!oracle" value="uuid"/>
 
-    <includeAll path="/com/company/sales/liquibase/changelog" errorIfMissingOrEmpty="false"/>
+    <includeAll path="/changelog" relativeToChangelogFile="true" errorIfMissingOrEmpty="false"/>
 
 </databaseChangeLog>

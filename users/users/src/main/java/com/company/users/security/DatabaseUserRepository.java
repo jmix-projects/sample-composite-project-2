@@ -1,6 +1,6 @@
-package com.company.sales.security;
+package com.company.users.security;
 
-import com.company.sales.entity.User;
+import com.company.users.entity.User;
 import io.jmix.securitydata.user.AbstractDatabaseUserRepository;
 import org.springframework.context.annotation.Primary;
 import org.springframework.security.core.GrantedAuthority;

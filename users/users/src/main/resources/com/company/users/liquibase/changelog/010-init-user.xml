@@ -9,7 +9,7 @@
 
     <changeSet id="1" author="sales" context="!cuba">
 
-        <createTable tableName="USER_">
+        <createTable tableName="USR_USER">
             <column name="ID" type="${uuid.type}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
@@ -30,15 +30,15 @@
     </changeSet>
 
     <changeSet id="2" author="sales" context="!cuba">
-        <createIndex indexName="IDX_USER__ON_USERNAME"
-                     tableName="USER_" unique="true">
+        <createIndex indexName="IDX_USER_ON_USERNAME"
+                     tableName="USR_USER" unique="true">
             <column name="USERNAME"/>
         </createIndex>
     </changeSet>
 
     <changeSet id="3" author="sales" context="!cuba">
 
-        <insert tableName="USER_" dbms="postgresql, mssql, hsqldb">
+        <insert tableName="USR_USER" dbms="postgresql, mssql, hsqldb">
             <column name="ID" value="60885987-1b61-4247-94c7-dff348347f93"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="admin"/>
@@ -46,7 +46,7 @@
             <column name="ACTIVE" valueBoolean="true"/>
         </insert>
 
-        <insert tableName="USER_" dbms="oracle, mysql, mariadb">
+        <insert tableName="USR_USER" dbms="oracle, mysql, mariadb">
             <column name="ID" value="608859871b61424794c7dff348347f93"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="admin"/>

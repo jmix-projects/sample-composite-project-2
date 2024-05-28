@@ -1,7 +1,7 @@
-package com.company.sales.user;
+package com.company.users.user;
 
-import com.company.sales.entity.User;
-import com.company.sales.test_support.AuthenticatedAsAdmin;
+import com.company.users.entity.User;
+import com.company.users.test_support.AuthenticatedAsAdmin;
 import io.jmix.core.DataManager;
 import io.jmix.core.security.UserRepository;
 import org.junit.jupiter.api.AfterEach;
